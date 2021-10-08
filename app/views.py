@@ -30,6 +30,8 @@ def produto_list(request):
 # função detail que recebe contém GET, PUT e DELETE
 # necessitando da passagem do parámetro ID
 def produto_detail(request, pk):
+
+  # verificando ser o produto existe via id
   try:
     produto = Produto.objects.get(pk=pk)
   except Produto.DoesNotExist:
