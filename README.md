@@ -54,6 +54,9 @@ Atualizar produto
 Remover produto
 >DELETE http://localhost:8000/produto/id/
 
+# Preview
+![preview](./loja_virtual_api.gif)
+
 # Documentação de desenvolvimento
 Nessa sessão documentei todo o processo utilizado para desenvolver a API com Django, para servir como uma doc de orientação para projetos futuros.
 <details>
