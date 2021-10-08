@@ -2,9 +2,60 @@
 
 Uma simples API utilizando Python/Django, possuí apenas um end point com o recurso produto, com operações de Cadastrar, Atualizar, Listar e Deletar, utilizando os verbos Post, Get, Update e Delete.
 
+# Tecnologias
+- [python3](https://www.python.org/) Linguagem de programação.
+- [Django](https://www.djangoproject.com/) Framework Web Python
+- [Django Rest Framework](https://www.django-rest-framework.org/) Ferramenta de construção de API's em Python
+- [Postman](https://www.postman.com/) Para consultar a API como client
+
 >Esse projeto foi isolado em um ambiente VENV do python para evitar qualquer problema ou conflito das dependências.
 
-# Documentação de desenvolvimendo
+# Instruções para utilizar
+Faça o clone do repositório via terminal
+>git clone https://github.com/adelsonguimaraes/loja_virtual_api.git
+
+Acesse via terminal o repositório do projeto e siga os passos.
+
+Crie uma máquina virutal VENV com o python.
+>python3 -m venv ./venv
+
+Ative a máquina virtual (Windows)
+>venv\Scripts\activate.bat
+
+Ative a máquina virtual (Linux)
+>source venv\Scripts\activate
+
+Instale o Django Framework
+>pip install django
+
+Instale o Django Rest Framework
+>pip install djangorestframework
+
+Como estamos utlizando o SQLite, não precisamos nos preocupar com o banco de dados pois o Django criará automaticamente o arquivo, então, vamos apenas executar nossa migrate.
+>python manage.py migrate
+
+Inicialize o servidor
+>python manage.py runserver
+
+Pronto, agora podemos utilizar alguma ferramenta como o [Postman](https://www.postman.com/) para consumir nossa API, abaixo segue os nossos endpoints.
+
+Listar todos os produtos
+>GET http://localhost:8000/produto/
+
+Cadastrar novo produto
+>POST http://localhost:8000/produto/
+
+Buscar produto por ID
+>GET http://localhost:8000/produto/id/
+
+Atualizar produto
+>PUT http://localhost:8000/produto/id/
+
+Remover produto
+>DELETE http://localhost:8000/produto/id/
+
+# Documentação de desenvolvimento
+Nessa sessão documentei todo o processo utilizado para desenvolver a API com Django, para servir como uma doc de orientação para projetos futuros.
 <details>
 
   <summary>Clique para expandir a seção</summary>
@@ -267,7 +318,29 @@ Atualizar
 Remover
 >DELETE http://localhost:8000/produto/id/
 
+## Gitignore
+Vamos criar nosso no arquivo ``.gitignore`` na raiz do projeto e configurar o que não queremos enviar para o repositório, com o seguinte conteúdo.
+```gitbash
+*.pyc  
+*~  
+__pycache__  
+venv  
+db.sqlite3  
+/static  
+.DS_Store
+```
+
 </details>
 
-# Tecnologias
+# Referências
+Aqui segue as referências que utilizei para a realização desse proejto.
 
+- [Criando uma API com Django](https://www.youtube.com/watch?v=BKChTO8GADk) - Youtube Alura Cursos
+- [Django Framework](https://docs.djangoproject.com/en/3.2/) - Documentação Django
+- [Django Rest Framework](https://www.django-rest-framework.org/) - Documentação Django Rest
+
+# Autor
+- Adelson Guimarães Monteiro
+- Analista Jr de Sistemas / FullStack
+- [Linkedin](https://www.linkedin.com/in/adelson-guimaraes-31b31a26/): Minha rede
+- [Github](https://github.com/adelsonguimaraes): Meus projetos
