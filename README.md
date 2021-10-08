@@ -333,7 +333,7 @@ db.sqlite3
 </details>
 
 # Referências
-Aqui segue as referências que utilizei para a realização desse proejto.
+Aqui segue as referências que utilizei para a realização desse projeto.
 
 - [Criando uma API com Django](https://www.youtube.com/watch?v=BKChTO8GADk) - Youtube Alura Cursos
 - [Django Framework](https://docs.djangoproject.com/en/3.2/) - Documentação Django
